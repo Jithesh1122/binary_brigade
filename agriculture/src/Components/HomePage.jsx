@@ -3,6 +3,7 @@ import React from "react";
 import './HomePage.css';
 import Crop from "./crop"; 
 import Footer from "./Footer"
+import Home from "./Home"
 
 const HomePage = () => {
     return (
@@ -22,9 +23,11 @@ const HomePage = () => {
                 <h1>Smart <span> Crop Predictor</span></h1>
                 <p>Optimize your farm's productivity with data-driven insights on crop selection and yield prediction.</p>
                 <button className="cta-btn">Learn more</button>
+                
             </section>
 
             <Crop /> 
+
 
             <footer className="footer">
                 <Footer/>
