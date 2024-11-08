@@ -1,0 +1,44 @@
+/* ContactUs.css */
+
+#contact-us {
+    background-color: #f9f9f9;
+    padding: 50px;
+    text-align: center;
+   
+  }
+  
+  .contact h2 {
+    color: #c37b16;
+    font-size: 1.8em;
+    margin-bottom: 50px;
+  }
+  
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .contact-item img {
+    width: 100%;
+    height: 30px;
+  }
+  
+  .contact-item a {
+    color: #cc8f14;
+    font-size: 1em;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .contact-item a:hover {
+    color: #ffcc00;
+  }
+  
