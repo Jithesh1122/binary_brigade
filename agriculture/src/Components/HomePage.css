@@ -17,7 +17,7 @@ body {
 }
 
 /* Scroll-snap sections */
-.home, .secondSection, .about, footer {
+.home, .secondSection, .about,.searchCrop, footer {
     scroll-snap-align: start; /* Align each section to the top when snapping */
 }
 
@@ -114,10 +114,17 @@ body {
 
 .secondSection {
     height: 100vh;
+    display: flex;
+    width: 100vw;   
+
 }
 
 /* About Section */
 .about {
+    height: 100vh;
+}
+.searchCrop{
+    display: flex;
     height: 100vh;
 }
 

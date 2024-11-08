@@ -1,72 +1,99 @@
-/* src/CropPredictionForm.css */
+/* Crop Prediction Form Styling */
 
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Kode+Mono:wght@400..700&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Kode+Mono:wght@400..700&family=Roboto:wght@400;500&display=swap');
 .form-container {
-    background-color: #fff;
-    padding: 2rem;
-    margin: 2rem auto;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ /* border:2px solid pink */
+ display: flex;
+ align-items: stretch;
+ flex-direction: row;
+ /* border: 3px lime solid ; */
+ width: 100%;
+ /* background-color: #c8591d8e; */
 }
+img{
+    width: 50%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 
-h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
 }
+.fromForCrop{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 50px ;
 
-.prediction-form {
+    flex-flow: row;
+     gap:20px;
+    flex-wrap: wrap;
+     
+    
+    /* border: 2px solid sandybrown; */
+    
+    transition: all 0.3s;
+}
+.fromForCrop .field{
+    flex: 1 1 30%; /* Adjusts width to 45% for two columns, with some spacing */
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    margin: 10px 0;
+    min-width: 200px
 }
-
-.form-group {
-    display: flex;
-    flex-direction: column;
+.fromForCrop .field label{
+    margin-bottom: 5px;
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: rgba(0, 0, 0, 0.612);
+    
+    /* font-weight: bolder; */
 }
-
-label {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-select {
-    padding: 0.8rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
+.fromForCrop .field input{
+    height: 20px;
+    padding: 10px;
     border-radius: 5px;
-}
-
-.submit-btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 1rem;
+    outline: none;
+    font-size: 20px ;
     border: none;
-    font-size: 1.1rem;
-    border-radius: 5px;
+    transition: all 0.3s;
+}
+.fromForCrop .field input:focus{
+/* border-bottom: black 3px solid ; */
+box-shadow: 4px 4px 5px rgb(0, 0, 0,0.3);
+background-color: #c8591d;
+color: white;
+}
+
+/* From Uiverse.io by satyamchaudharydev */ 
+/* inspired form gumroad website */
+.submit-btn {
+    --bg: #000;
+    --hover-bg: #ffb590;
+    --hover-text: #000;
+    color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s;
-}
+    border: 1px solid var(--bg);
+    border-radius: 4px;
+    padding:10px 15px 10px 15px  ;
+    transform: translate(3px,12px);
+    background: var(--bg);
+    transition: 0.2s;
+  }
+  
+  .submit-btn:hover {
+    color: var(--hover-text);
+    transform: translate(-0.25rem, -0.25rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+  }
+  
+  .submit-btn:active {
+    transform: translate(0);
+    box-shadow: none;
+  }
+  
 
-.submit-btn:hover {
-    background-color: #45a049;
-}
 
-.output {
-    margin-top: 2rem;
-    background-color: #f9f9f9;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
-.output h3 {
-    margin-bottom: 1rem;
-}
-
-.output p {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-}
+ 

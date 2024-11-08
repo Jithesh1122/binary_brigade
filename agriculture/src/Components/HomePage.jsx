@@ -3,6 +3,7 @@ import './HomePage.css';
 import Crop from "./crop"; 
 import Footer from "./Footer";
 import AboutSection from "./AboutSection";
+import SearchCrop from "./SearchCrop";
 
 const HomePage = () => {
     return (
@@ -14,7 +15,7 @@ const HomePage = () => {
                             <ul className="nav-links">
                                 <li><a href="#">Home</a></li>
                                 <li><a href="#about">About</a></li> {/* Link to About section */}
-                                <li><a href="#">Features</a></li>
+                                <li><a href="#Crop">Features</a></li>
                                 <li><a href="#">Contact</a></li>
                             </ul>
                         </nav>
@@ -29,12 +30,15 @@ const HomePage = () => {
                     </section>
                 </div>
 
-                <div className="secondSection">
+                <div id='Crop' className="secondSection">
                     <Crop /> 
                 </div>
 
                 <div id="about" className="about"> {/* Set id to target this section */}
                     <AboutSection />
+                </div>
+                <div className="searchCrop">
+                    <SearchCrop/>
                 </div>
 
                 <footer className="footer">

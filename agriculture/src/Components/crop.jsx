@@ -1,81 +1,74 @@
-// src/CropPredictionForm.js
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import cropImage from './images/young-corn-plants-growing-on-600nw-2299683499.webp'
 import './crop.css';
 
-const CropPredictionForm = () => {
-    const [state, setState] = useState("");
-    const [season, setSeason] = useState("");
-    const [output, setOutput] = useState(null);
+function CropPredictionForm() {
+    // State to handle form inputs
+    const [soilQuality, setSoilQuality] = useState('');
+    const [rainfall, setRainfall] = useState('');
+    const [temperature, setTemperature] = useState('');
+    const [humidity, setHumidity] = useState('');
+    const [cropType, setCropType] = useState('');
+    const [historicalYield, setHistoricalYield] = useState('');
 
-    // List of Indian States
-    const indianStates = [
-        "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat", 
-        "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", 
-        "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab", 
-        "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Uttar Pradesh", "Uttarakhand", 
-        "West Bengal", "Andaman and Nicobar Islands", "Chandigarh", "Dadra and Nagar Haveli and Daman and Diu", 
-        "Lakshadweep", "Delhi", "Puducherry"
-    ];
-
-    // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        // You can replace this with the logic to predict the yield based on input
-        if (state && season) {
-            const predictedYield = `Predicted yield for ${state} in the ${season} season is 2500 kg/hectare.`; // Example output
-            setOutput(predictedYield);
-        } else {
-            setOutput("Please select both state and season.");
-        }
+        // Handle form submission logic here (e.g., triggering yield prediction)
+        const formData = {
+            soilQuality,
+            rainfall,
+            temperature,
+            humidity,
+            cropType,
+            historicalYield,
+        };
+        console.log(formData);
+        // You can also call a prediction function or API here to process the data.
     };
 
     return (
         <div className="form-container">
-            <h2>Crop Yield Prediction</h2>
-            <form onSubmit={handleSubmit} className="prediction-form">
-                <div className="form-group">
-                    <label htmlFor="state">State</label>
-                    <select
-                        id="state"
-                        value={state}
-                        onChange={(e) => setState(e.target.value)}
-                    >
-                        <option value="">Select a state</option>
-                        {indianStates.map((stateName, index) => (
-                            <option key={index} value={stateName}>
-                                {stateName}
-                            </option>
-                        ))}
-                    </select>
+            <img className='imageofCrop' src={cropImage} alt="" />
+            <form className='fromForCrop' onSubmit={handleSubmit}>
+                <div className="field">
+                <label htmlFor="option1 ">Nitogen</label>
+                <input type="text" />
                 </div>
-
-                <div className="form-group">
-                    <label htmlFor="season">Season</label>
-                    <select
-                        id="season"
-                        value={season}
-                        onChange={(e) => setSeason(e.target.value)}
-                    >
-                        <option value="">Select a season</option>
-                        <option value="Kharif">Spring</option>
-                        <option value="Summer">Summer</option>
-                        <option value="Rabi">Monsoon</option>
-                        <option value="Winter">Winter</option>
-                    </select>
+                <div className="field">
+                <label htmlFor="option1 ">Potassium</label>
+                <input type="text" />
                 </div>
-
+                <div className="field">
+                <label htmlFor="option1 ">Phosporus</label>
+                <input type="text" />
+                </div>
+                <div className="field">
+                <label htmlFor="option1 ">Temperature</label>
+                <input type="text" />
+                </div>
+                <div className="field">
+                <label htmlFor="option1 ">Humidity</label>
+                <input type="text" />
+                </div>
+                <div className="field">
+                <label htmlFor="option1 ">ph</label>
+                <input type="text" />
+                </div>
+                <div className="field">
+                <label htmlFor="option1 ">rainfall</label>
+                <input type="text" />
+                </div>
+                <div className="field">
+                <label htmlFor="option1 ">crop</label>
+                <input type="text" />
+                </div>
                 <button type="submit" className="submit-btn">Predict Yield</button>
+               
+                
+          
             </form>
-
-            {output && (
-                <div className="output">
-                    <h3>Prediction Output:</h3>
-                    <p>{output}</p>
-                </div>
-            )}
         </div>
     );
-};
+}
 
 export default CropPredictionForm;
