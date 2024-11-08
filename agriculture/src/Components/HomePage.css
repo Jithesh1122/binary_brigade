@@ -7,30 +7,33 @@ body {
     background-color: #f7f7f7;
 }
 
-  .home-container {
-    scroll-snap-type: y mandatory; /* Snap vertically */
+/* Home container with scroll snap */
+.home-container {
+    scroll-snap-type: y mandatory; /* Enable vertical snap */
     overflow-y: scroll;  /* Ensure scrolling works */
-    height: 100vh;  /* Ensure it covers the full screen height */
+    height: 100vh;  /* Full height of the screen */
     margin: 0;
+    scroll-behavior: smooth; /* Smooth scrolling effect */
 }
 
+/* Scroll-snap sections */
+.home, .secondSection, .about, footer {
+    scroll-snap-align: start; /* Align each section to the top when snapping */
+}
 
 /* Navigation Bar */
 .navbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    z-index: 1000;
     padding: 1rem 2rem;
-    position: fixed;
-    left: 30%;
+    box-shadow: 0 5px 20px rgba(195, 145, 7, 0.1);
+    background: #e4e4c1fd;
+    backdrop-filter: blur(20px);
     
-    background-color: rgba(214, 45, 45, 0);
-    
-    color: white;
-
+    position: relative;
+  
 }
-
 
 .nav-links {
     list-style: none;
@@ -39,29 +42,21 @@ body {
 }
 
 .nav-links li a {
-
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 1px black;
     text-decoration: none;
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
     border-radius: 5px;
-   
-
 }
 
-.nav-links li  {
+.nav-links li {
     position: relative;
-        
-         /* border: 1px solid black; */
-    transition: all 0.3s;
-   
-
+    transition: transform 0.3s ease;
 }
- 
+
 .nav-links li:hover {
-    
-    bottom: 5px;
+    transform: translateY(-5px);
 }
 
 /* Hero Section */
@@ -72,7 +67,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
-    margin: 0px;
     color: white;
     height: 100vh;
     width: 100vw;
@@ -83,22 +77,21 @@ body {
     margin-bottom: 0.3rem;
     margin-top: 5rem;
     margin-left: 3rem;
-    width: 5%;
-    text-shadow: 5px 2px  rgb(0, 0, 0,0.5);
+    text-shadow: 5px 2px rgb(0, 0, 0, 0.5);
 }
-.hero h1 span{
-    color:#c8591d;
-    text-shadow: 5px 2px  rgb(0, 0, 0,0.5);
+
+.hero h1 span {
+    color: #c8591d;
+    text-shadow: 5px 2px rgb(0, 0, 0, 0.5);
 }
 
 .hero p {
     font-size: 1.3rem;
     margin-bottom: 2rem;
-    margin-top:0px;
     margin-left: 3rem;
     text-align: left;
     width: 25%;
-    text-shadow: 1px 2px 30px black; 
+    text-shadow: 1px 2px 30px black;
     color: #ffffff;
 }
 
@@ -119,6 +112,15 @@ body {
     filter: brightness(1.1);
 }
 
+.secondSection {
+    height: 100vh;
+}
+
+/* About Section */
+.about {
+    height: 100vh;
+}
+
 /* Footer */
 .footer {
     background-color: #333;
@@ -129,9 +131,8 @@ body {
     bottom: 0;
     width: 100%;
 }
+
+/* Ensure no horizontal scroll */
 body, .home-container {
     overflow-x: hidden;
-}
-html {
-    scroll-behavior: smooth;
 }
