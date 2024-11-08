@@ -1,6 +1,46 @@
-.aboutUs{
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    /* border: pink solid 3px ; */
-}
+/* About.css */
+
+.about {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 0.2rem;
+  }
+  
+  .about-content {
+    max-width: 600px;
+    padding: 20px;
+    flex: 1;
+  }
+  
+  .about-content h2 {
+    color: #c67f1d;
+    font-size: 2.2em;
+    margin-bottom: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .about-content p {
+    color: #3b3838;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-family: serif;
+  }
+  
+  .about-image {
+    flex: 1;
+    max-width: 800px;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 3, 5, 0.5);
+  }
+  

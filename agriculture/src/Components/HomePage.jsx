@@ -1,7 +1,7 @@
 import React from "react";
 import './HomePage.css';
 import Crop from "./crop"; 
-import Footer from "./Footer";
+import ContactUs from "./ContactUs";
 import AboutSection from "./AboutSection";
 import SearchCrop from "./SearchCrop";
 
@@ -42,7 +42,7 @@ const HomePage = () => {
                 </div>
 
                 <footer className="footer">
-                    <Footer />
+                    <ContactUs />
                 </footer>
             </div>
         </>
