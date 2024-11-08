@@ -2,6 +2,7 @@
 import React from "react";
 import './HomePage.css';
 import Crop from "./crop"; 
+import Footer from "./Footer"
 
 const HomePage = () => {
     return (
@@ -26,7 +27,7 @@ const HomePage = () => {
             <Crop /> {/* Include the form component here */}
 
             <footer className="footer">
-                <p>&copy; 2024 Smart Crop Predictor | All rights reserved</p>
+                <Footer/>
             </footer>
         </div>
     );

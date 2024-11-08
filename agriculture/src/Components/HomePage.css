@@ -7,6 +7,14 @@ body {
     background-color: #f7f7f7;
 }
 
+  .home-container {
+    scroll-snap-type: y mandatory; /* Snap vertically */
+    overflow-y: scroll;  /* Ensure scrolling works */
+    height: 100vh;  /* Ensure it covers the full screen height */
+    margin: 0;
+}
+
+
 /* Navigation Bar */
 .navbar {
     display: flex;
@@ -120,4 +128,10 @@ body {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+body, .home-container {
+    overflow-x: hidden;
+}
+html {
+    scroll-behavior: smooth;
 }
