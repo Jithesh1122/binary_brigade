@@ -2,6 +2,7 @@
 import React from "react";
 import './HomePage.css';
 import Crop from "./crop"; 
+import Footer from "./Footer";
 
 const HomePage = () => {
     return (
@@ -23,10 +24,10 @@ const HomePage = () => {
                 <button className="cta-btn">Learn more</button>
             </section>
 
-            <Crop /> {/* Include the form component here */}
+            <Crop /> 
 
             <footer className="footer">
-                <p>&copy; 2024 Smart Crop Predictor | All rights reserved</p>
+                <Footer />
             </footer>
         </div>
     );
