@@ -24,7 +24,7 @@ const HomePage = () => {
                 <button className="cta-btn">Learn more</button>
             </section>
 
-            <Crop /> {/* Include the form component here */}
+            <Crop /> 
 
             <footer className="footer">
                 <Footer/>
