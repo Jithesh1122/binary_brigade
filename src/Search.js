@@ -109,7 +109,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const CropSearch = () => {
+const Search = () => {
   // State variables
   const [cropName, setCropName] = useState('');
   const [cropData, setCropData] = useState(null);
@@ -174,4 +174,4 @@ const CropSearch = () => {
   );
 };
 
-export default CropSearch;
+export default Search;
