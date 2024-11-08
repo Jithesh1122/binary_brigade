@@ -1,0 +1,123 @@
+/* src/HomePage.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    position: fixed;
+    left: 30%;
+    
+    background-color: rgba(214, 45, 45, 0);
+    
+    color: white;
+
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+   
+
+}
+
+.nav-links li  {
+    position: relative;
+        
+         /* border: 1px solid black; */
+    transition: all 0.3s;
+   
+
+}
+ 
+.nav-links li:hover {
+    
+    bottom: 5px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: left;
+    padding: 4rem 2rem;
+    background-image: url(./images/bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    margin: 0px;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    margin-bottom: 0.3rem;
+    margin-top: 5rem;
+    margin-left: 3rem;
+    width: 5%;
+    text-shadow: 5px 2px  rgb(0, 0, 0,0.5);
+}
+.hero h1 span{
+    color:#c8591d;
+    text-shadow: 5px 2px  rgb(0, 0, 0,0.5);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    margin-top:0px;
+    margin-left: 3rem;
+    text-align: left;
+    width: 25%;
+    text-shadow: 1px 2px 30px black; 
+    color: #666634;
+}
+
+.cta-btn {
+    padding: 1rem 2rem;
+    background-color: #c4591c;
+    margin-left: 3rem;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #c45a1cf8;
+    filter: brightness(1.1);
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
