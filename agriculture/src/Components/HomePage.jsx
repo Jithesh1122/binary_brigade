@@ -13,10 +13,10 @@ const HomePage = () => {
                     <div className="navbar">
                         <nav>
                             <ul className="nav-links">
-                                <li><a href="#">Home</a></li>
+                                <li><a href="#Search">Search</a></li>
                                 <li><a href="#about">About</a></li> {/* Link to About section */}
                                 <li><a href="#Crop">Features</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="#footer">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -37,11 +37,11 @@ const HomePage = () => {
                 <div id="about" className="about"> {/* Set id to target this section */}
                     <AboutSection />
                 </div>
-                <div className="searchCrop">
+                <div id="Search" className="searchCrop">
                     <SearchCrop/>
                 </div>
 
-                <footer className="footer">
+                <footer  id='footer' className="footer">
                     <ContactUs />
                 </footer>
             </div>
