@@ -4,6 +4,7 @@ import Crop from "./crop";
 import ContactUs from "./ContactUs";
 import AboutSection from "./AboutSection";
 import SearchCrop from "./SearchCrop";
+import CropRecommendation from "./CropRecommendation"; 
 
 const HomePage = () => {
     return (
@@ -36,6 +37,9 @@ const HomePage = () => {
 
                 <div id="about" className="about"> {/* Set id to target this section */}
                     <AboutSection />
+                </div>
+                <div id='CropRecommendation' className="secondSection">
+                    <CropRecommendation /> 
                 </div>
                 <div id="Search" className="searchCrop">
                     <SearchCrop/>

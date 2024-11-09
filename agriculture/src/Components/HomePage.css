@@ -126,7 +126,7 @@ body {
 .searchCrop{
     display: flex;
     height: 100vh;
-    border: 5px green solid ;
+    /* border: 5px green solid ; */
 }
 
 /* Footer */

@@ -34,7 +34,7 @@ img{
     transition: all 0.3s;
 }
 .fromForCrop .field{
-    flex: 1 1 30%; /* Adjusts width to 45% for two columns, with some spacing */
+    /* flex: 1 2 30%; Adjusts width to 45% for two columns, with some spacing */
     display: flex;
     flex-direction: column;
     margin: 10px 0;
@@ -68,6 +68,8 @@ color: white;
 /* From Uiverse.io by satyamchaudharydev */ 
 /* inspired form gumroad website */
 .submit-btn {
+    /* align-self: flex-end; */
+    /* justify-content: center; */
     --bg: #000;
     --hover-bg: #ffb590;
     --hover-text: #000;
@@ -79,6 +81,10 @@ color: white;
     transform: translate(3px,12px);
     background: var(--bg);
     transition: 0.2s;
+    /* margin-left:10% ; */
+    width: 50%;
+    height: 45px;
+ 
   }
   
   .submit-btn:hover {
@@ -93,7 +99,30 @@ color: white;
     box-shadow: none;
   }
   
+  .resultContainer{
+text-align: center;
+/* border: 2px solid red; */
+/* text-overflow: clip; */
+
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 
 
 
+  }
+
+
+.result{
+    border: 2px solid rgb(196, 89, 28);
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    height: auto;
+    font-size: 20px;
+    text-overflow: clip;
+    box-shadow: 0px 0px 7px rgb(196, 89, 28,0.5);
+}
  
